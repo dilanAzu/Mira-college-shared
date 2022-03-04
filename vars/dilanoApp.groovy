@@ -1,4 +1,4 @@
-def call(String rep) {
+def call(String repoUrl) {
  pipeline {
          agent any
           tools {
