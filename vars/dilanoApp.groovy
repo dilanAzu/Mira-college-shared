@@ -5,7 +5,7 @@ def call(String repoUrl) {
            maven 'maven'
         }
         stages {
-           stage("Tools initialization")
+            stage("Tools initialization") {
              steps {
                    sh 'mvn --version'
                    sh 'java -version'
@@ -14,7 +14,7 @@ def call(String repoUrl) {
      stage("Checkout Code") {
           steps {
                 git branch: 'main',
-                 url:       "${repoUrl}"
+                      url:  "${repoUrl}"
           }
      }
   stage("to-test-maven") {
